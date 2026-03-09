@@ -18,14 +18,6 @@ function openGift() {
   }
 }
 
-function playSong() {
-  const song = document.getElementById("birthdaySong");
-
-  if (song) {
-    song.play();
-  }
-}
-
 function startEmojis() {
   const container = document.getElementById("container");
 
@@ -63,5 +55,15 @@ function flipPhoto() {
 
   if (card) {
     card.classList.toggle("flipped");
+  }
+}
+function playSong() {
+  const song = document.getElementById("birthdaySong");
+  if (song) {
+    song
+      .play()
+      .catch((e) =>
+        console.log("Audio blocked on mobile, user interaction needed"),
+      );
   }
 }
