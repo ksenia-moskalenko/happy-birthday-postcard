@@ -28,11 +28,11 @@
         <div class="photo-card" id="photoCard" onclick="flipPhoto()">
           <div class="photo-inner">
             <div class="photo-front">
-              <img src="../images/photo1.jpg" alt="" />
+              <img src="./images/photo1.jpg" alt="" />
             </div>
 
             <div class="photo-back">
-              <img src="../images/photo2.jpg" alt="" />
+              <img src="./images/photo2.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -42,8 +42,10 @@
         <button class="open1" onclick="handleClick()">ОТКРЫТЬ</button>
       </div>
 
-      <audio id="birthdaySong" src="../audio/happy.mp3"></audio>
-      <audio id="birthdaySong" src="../audio/happy.m4a"></audio>
+      <audio id="birthdaySong">
+        <source src="./audio/happy.mp3" type="audio/mpeg" />
+        <source src="./audio/happy.m4a" type="audio/m4a" />
+      </audio>
     </section>
   </body>
 </html>
