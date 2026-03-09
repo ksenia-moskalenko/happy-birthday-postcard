@@ -3,22 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="stylesheets/style.css" />
     <script defer src="javascript/script.js"></script>
+
     <title>happy</title>
   </head>
+
   <body>
     <section class="section1">
-      <p>С ДНЕМ РОЖДЕНИЯ, ПАПА</p>
-      <img
-        id="giftImage"
-        src="images/gift1.svg"
-        alt="gift"
-        class="gift-image"
-      />
+      <p class="title">С ДНЕМ РОЖДЕНИЯ, ПАПА</p>
+
+      <div class="gift-box" id="giftBox">
+        <div class="gift-lid">
+          <div class="bow"></div>
+        </div>
+
+        <div class="gift-body">
+          <div class="ribbon-vertical"></div>
+          <div class="ribbon-horizontal"></div>
+        </div>
+
+        <!-- ФОТО -->
+        <div class="photo-card" id="photoCard" onclick="flipPhoto()">
+          <div class="photo-inner">
+            <div class="photo-front">
+              <img src="images/photo1.jpg" alt="" />
+            </div>
+
+            <div class="photo-back">
+              <img src="images/photo2.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div id="container">
         <button class="open1" onclick="handleClick()">ОТКРЫТЬ</button>
       </div>
+
+      <audio id="birthdaySong" src="audio/happy.m4a"></audio>
     </section>
   </body>
 </html>

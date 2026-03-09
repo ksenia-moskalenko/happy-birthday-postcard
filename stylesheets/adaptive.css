@@ -1,0 +1,19 @@
+@media (max-width: 600px) {
+  .gift-box {
+    width: 260px;
+    height: 240px;
+  }
+
+  .gift-body {
+    width: 260px;
+    height: 190px;
+  }
+
+  .gift-lid {
+    width: 280px;
+  }
+  .title {
+    color: #ff4d6d;
+    font-size: 30px;
+  }
+}
