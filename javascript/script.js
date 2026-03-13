@@ -8,6 +8,7 @@ function handleClick() {
   startEmojis();
   openGift();
   playSong();
+  startFireworks();
 }
 
 function openGift() {
@@ -65,5 +66,31 @@ function playSong() {
       .catch((e) =>
         console.log("Audio blocked on mobile, user interaction needed"),
       );
+  }
+}
+function startFireworks() {
+  const container = document.getElementById("fireworks");
+
+  const colors = ["red", "yellow", "blue", "orange", "purple", "gold"];
+
+  for (let i = 0; i < 40; i++) {
+    const particle = document.createElement("div");
+
+    particle.className = "firework";
+
+    particle.style.background =
+      colors[Math.floor(Math.random() * colors.length)];
+
+    const x = (Math.random() - 0.5) * 200;
+    const y = (Math.random() - 0.5) * 200;
+
+    particle.style.setProperty("--x", x + "px");
+    particle.style.setProperty("--y", y + "px");
+
+    container.appendChild(particle);
+
+    setTimeout(() => {
+      particle.remove();
+    }, 1000);
   }
 }

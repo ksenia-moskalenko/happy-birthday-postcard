@@ -204,7 +204,36 @@ body {
     transform: translateY(100vh);
   }
 }
+#fireworks {
+  position: absolute;
+  bottom: 8vw;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 5;
+  width: 0;
+  height: 0;
+}
 
+.firework {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+  from {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate(var(--x), var(--y));
+    opacity: 0;
+  }
+}
 /* мобильный адаптив */
 
 @media (max-width: 600px) {
